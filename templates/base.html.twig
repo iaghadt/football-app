@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+        <style type="text/css">
+            .container {
+                max-width: 600px;
+            }
+
+            h1 {
+                color: #6c757d;
+            }
+
+            .form-control {
+                border-radius: 0;
+                border-color: #6c757d;
+            }
+
+            .btn-success {
+                background-color: #28a745;
+                border-color: #28a745;
+            }
+
+            .btn-success:hover {
+                background-color: #218838;
+                border-color: #1e7e34;
+            }
+
+            body {
+                background-color: #1f2833;
+                color: #c5c6c7;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .container {
+                max-width: 600px;
+                margin-top: 5rem;
+                border-radius: 20px;
+                background-color: #0b0c10;
+                box-shadow: 0px 0px 5px 0px #45a29e;
+                padding: 20px;
+            }
+
+            h1 {
+                color: #66fcf1;
+                text-align: center;
+                padding-bottom: 1rem;
+            }
+
+            .form-group {
+                margin-bottom: 1.5rem;
+            }
+
+            .form-control {
+                background-color: #4b4b4b;
+                color: #c5c6c7;
+                border: none;
+                border-radius: 0;
+                border-bottom: 3px solid #45a29e;
+            }
+
+            .form-control:focus {
+                background-color: #4b4b4b;
+                border-color: #66fcf1;
+                outline: none;
+                box-shadow: none;
+            }
+
+            .btn-success {
+                background-color: #45a29e;
+                border-color: #45a29e;
+                color: #1f2833;
+            }
+
+            .btn-success:hover {
+                background-color: #66fcf1;
+                border-color: #66fcf1;
+                color: #0b0c10;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

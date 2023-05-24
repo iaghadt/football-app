@@ -1,0 +1,21 @@
+# config/routes.yaml
+
+index:
+    path: /
+    controller: App\Controller\TeamController::index
+    methods: GET
+
+team_new:
+    path: /team/new
+    controller: App\Controller\TeamController::new
+    methods: [GET, POST]
+
+player_transfer:
+    path: /player/transfer
+    controller: App\Controller\PlayerController::transfer
+    methods: [GET, POST]
+
+player_add:
+    path: /player/add
+    controller: App\Controller\PlayerController::add
+    methods: [GET, POST]
